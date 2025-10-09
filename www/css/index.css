@@ -39,17 +39,29 @@ button {
 }
 
 .tasklist .list {
-    padding: 8px;
+    display: flex;
+    flex-direction: column;
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 8px;
-    min-height: 80px;
+    height: 200px;
     margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.tasklist .list .task {
+    padding: 3px 10px;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.tasklist .list .task:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #inputBtn {
     background-color: rgb(60, 107, 164);
-    padding: 4px 8px;
+    padding: 6px 10px;
     border-radius: 8px;
     text-align: center;
     transition: 0.4s ease;
