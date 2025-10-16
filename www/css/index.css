@@ -38,18 +38,28 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 8px;
     height: 200px;
+    width: 300px;
     margin-bottom: 20px;
     overflow-y: auto;
 }
 
 .tasklist .list .task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 3px 10px;
     width: 100%;
+    height: 25px;
     transition: 0.3s ease;
 }
 
-.tasklist .list .task:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+.tasklist .list .task.hidden {
+    pointer-events: none;
+    transform: translateX(-50px);
+    height: 0px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    opacity: 0;
 }
 
 #inputBtn {
@@ -62,4 +72,18 @@ button {
 
 #inputBtn:hover {
     background-color: rgb(74, 133, 205);
+}
+
+.delBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(199, 49, 49);
+    min-width: 30px;
+    height: 20px;
+    font-size: 13px;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: 10px;
+    transition: 0.4s ease;
 }
