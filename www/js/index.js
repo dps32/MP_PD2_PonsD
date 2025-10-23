@@ -2,17 +2,25 @@ $(document).ready( function ()  {
 
     $('#inputBtn').click(addElem);
 
+
 });
 
 function addElem() {
     const text = prompt("Nombre de la tarea:");
     if (text) {
-        const elem = $(`<div class="task"><input class='taskText' value='${text}'/><div><button class="editBtn">Edit</button><button class="saveBtn">Save</button><button class="delBtn">X</button></div></div>`);
+        const elem = $(`<div class="task hidden"><input class='taskText' value='${text}'/><div><button class="editBtn">Edit</button><button class="saveBtn">Save</button><button class="delBtn">X</button></div></div>`);
         $('.tasklist .list').append(elem);
         $('button.delBtn', elem).click(delElem);
         $('button.editBtn', elem).click(editElem);
         $('button.saveBtn', elem).click(saveElem);
+
+        setTimeout(() => {
+            elem.removeClass('hidden');
+        }, 20);
+
     }
+
+
 }
 
 function delElem(e) {

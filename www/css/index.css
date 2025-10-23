@@ -12,7 +12,7 @@ body, html {
     justify-content: center;
     width: 100%;
     color: white;
-    background-color: rgb(41, 41, 41);
+    background-color: #222229;
 }
 
 button {
@@ -24,9 +24,9 @@ button {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: rgb(71, 71, 71);
+    background-color: rgb(43, 42, 49);
     border-radius: 10px;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px #00000036;
     padding: 25px;
     min-width: 500px;
     max-width: 500px;
@@ -35,13 +35,22 @@ button {
 .tasklist .list {
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(21, 21, 21, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 8px;
-    height: 200px;
+    height: 250px;
     width: 100%;
     margin-bottom: 20px;
     overflow-y: auto;
+}
+
+.tasklist .list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tasklist .list::-webkit-scrollbar-thumb {
+    background-color: #55555588;
+    border-radius: 4px;
 }
 
 .tasklist .list .task {
@@ -56,9 +65,9 @@ button {
 
 .tasklist .list .task.hidden {
     pointer-events: none;
-    transform: translateX(-50px);
+    transform: translateY(-30px);
     max-height: 0px;
-    padding: 0;
+    padding: 0 5px;
     opacity: 0;
 }
 
@@ -71,7 +80,7 @@ button {
 }
 
 #inputBtn {
-    background-color: rgb(60, 107, 164);
+    background-color: rgb(39, 50, 108);
     padding: 10px 10px;
     border-radius: 8px;
     text-align: center;
@@ -79,7 +88,7 @@ button {
 }
 
 #inputBtn:hover {
-    background-color: rgb(74, 133, 205);
+    background-color: rgb(55, 70, 141);
 }
 
 .delBtn,
@@ -106,22 +115,22 @@ button {
 
 .saveBtn {
     font-size: 13px;
-    background-color: rgb(29, 199, 51);
+    background-color: rgb(40, 143, 54);
     max-width: 0;
     padding-inline: 0;
 }
 
 .saveBtn:hover {
-    background-color: rgb(38, 218, 62);
+    background-color: rgb(54, 171, 69);
 }
 
 .editBtn {
     font-size: 13px;
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(72, 71, 90);
 }
 
 .editBtn:hover {
-    background-color: rgb(128, 128, 128);
+    background-color: rgb(96, 94, 117);
 }
 
 .taskText {
@@ -135,7 +144,7 @@ button {
 
 .taskText.editable {
     pointer-events: all;
-    border-color: gray;
+    border-color: #ffffff40;
 }
 
 .task:has(.taskText.editable) .delBtn,
